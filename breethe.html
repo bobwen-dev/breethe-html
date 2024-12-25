@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Breethe</title>
+	<style>
+		html {
+			--dark-color: #000;
+			--bright-color: #ff9100;
+			--cycle-time: 7s;
+			--delay-time: 1s;
+			background-color: var(--dark-color);
+		}
+
+		body {
+			margin: 0;
+			height: 100vh;
+		}
+
+		.breathe {
+			background-color: var(--bright-color);
+			filter: brightness(0);
+			animation: var(--cycle-time) ease var(--delay-time) infinite breathe;
+		}
+
+		@keyframes breathe {
+
+			0%,
+			100% {
+				filter: brightness(0);
+			}
+
+			50% {
+				filter: brightness(1);
+			}
+		}
+	</style>
+</head>
+
+<body class="breathe">
+</body>
+
+</html>
